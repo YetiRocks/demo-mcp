@@ -1,0 +1,9 @@
+# MCP Demo — searchable product catalog
+type Product @table(database: "demo-mcp") @export(public: [read]) {
+  id: String! @primaryKey
+  name: String!
+  category: String!
+  description: String!
+  price: Float!
+  inStock: Boolean!
+}

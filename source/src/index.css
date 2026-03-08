@@ -1,0 +1,203 @@
+/* demo-mcp: page-specific styles extending yeti.css */
+
+/* Override cols-2 to add subnav row */
+.cols-2 {
+  grid-template-rows: auto 1fr auto;
+}
+
+/* ── Subnav (split left/right matching panel columns) ── */
+.mcp-subnav {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 40px;
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+.mcp-subnav-col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+}
+
+.mcp-subnav-col + .mcp-subnav-col {
+  border-left: 1px solid var(--color-border-primary);
+}
+
+.mcp-subnav-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 2px;
+  color: var(--color-grey);
+  text-transform: uppercase;
+}
+
+.mcp-url-box {
+  display: flex;
+  align-items: center;
+}
+
+.mcp-url-input {
+  padding: 3px 10px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-right: none;
+  background: rgba(0,0,0,0.2);
+  color: var(--color-accent);
+  font-size: 12px;
+  font-family: var(--font-family-mono);
+  text-align: center;
+  width: 300px;
+  outline: none;
+}
+
+.mcp-url-copy {
+  padding: 3px 7px;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.03);
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.mcp-url-copy.copied {
+  background: rgba(100,200,100,0.1);
+  color: rgba(100,200,100,0.7);
+}
+
+/* ── Panel body (black overlay, full height) ── */
+.mcp-panel-body {
+  flex: 1;
+  background: var(--color-black-overlay);
+  padding: var(--space-4);
+  overflow: auto;
+  min-height: 0;
+}
+
+/* ── History entries ── */
+.mcp-history-entry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  width: 100%;
+  flex-shrink: 0;
+}
+.mcp-history-entry:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+.mcp-source-badge {
+  font-size: var(--font-size-sm);
+  padding: 1px 5px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+.mcp-source-badge.ui {
+  background: rgba(100,180,255,0.12);
+  color: rgba(120,180,255,0.9);
+}
+.mcp-source-badge.agent {
+  background: rgba(130,100,255,0.15);
+  color: rgba(160,140,255,0.9);
+}
+
+.mcp-history-query {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgba(255,255,255,0.75);
+}
+
+.mcp-result-badge {
+  font-size: var(--font-size-sm);
+  padding: 1px 6px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+.mcp-result-badge.ok {
+  background: rgba(100,200,100,0.12);
+  color: rgba(100,200,100,0.8);
+}
+.mcp-result-badge.error {
+  background: rgba(200,100,100,0.12);
+  color: rgba(200,100,100,0.8);
+}
+
+/* ── Bottom bar (shared height for left search + right shortcuts) ── */
+.mcp-bottom-bar {
+  flex-shrink: 0;
+  padding-top: 12px;
+  margin-top: 12px;
+  min-height: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ── Search input ── */
+.mcp-search-input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+/* ── Example search buttons ── */
+.mcp-example-btn {
+  flex: 1 1 25%;
+  padding: 6px 0;
+  font-size: var(--font-size-sm);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+.mcp-example-btn:hover {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.85);
+}
+
+/* ── Audit entry metadata ── */
+.mcp-duration {
+  font-size: var(--font-size-sm);
+  color: rgba(255,255,255,0.35);
+  flex-shrink: 0;
+  font-family: var(--font-family-mono);
+}
+
+.mcp-time {
+  font-size: var(--font-size-sm);
+  color: rgba(255,255,255,0.25);
+  flex-shrink: 0;
+  min-width: 65px;
+  text-align: right;
+}
+
+/* ── JSON response ── */
+.mcp-json-output {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: rgba(255,255,255,0.85);
+  font-family: var(--font-family-mono);
+}

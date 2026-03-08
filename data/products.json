@@ -1,0 +1,16 @@
+{
+  "database": "demo-mcp",
+  "table": "Product",
+  "records": [
+    { "id": "p-001", "name": "Mechanical Keyboard", "category": "peripherals", "description": "Cherry MX Brown switches, RGB backlight, full-size layout", "price": 129.99, "inStock": true },
+    { "id": "p-002", "name": "Wireless Mouse", "category": "peripherals", "description": "Ergonomic design, 16000 DPI sensor, USB-C charging", "price": 79.99, "inStock": true },
+    { "id": "p-003", "name": "4K Monitor", "category": "displays", "description": "27-inch IPS panel, HDR10, 144Hz refresh rate", "price": 549.00, "inStock": true },
+    { "id": "p-004", "name": "USB-C Hub", "category": "accessories", "description": "7-in-1 hub with HDMI, SD card, USB-A, ethernet", "price": 45.99, "inStock": true },
+    { "id": "p-005", "name": "Standing Desk", "category": "furniture", "description": "Electric sit-stand desk, 48x30 bamboo top, programmable presets", "price": 499.00, "inStock": false },
+    { "id": "p-006", "name": "Noise-Cancelling Headphones", "category": "audio", "description": "Over-ear ANC, 30-hour battery, multipoint Bluetooth", "price": 299.00, "inStock": true },
+    { "id": "p-007", "name": "Webcam", "category": "peripherals", "description": "1080p60 with autofocus, built-in mic, privacy shutter", "price": 89.99, "inStock": true },
+    { "id": "p-008", "name": "Laptop Stand", "category": "accessories", "description": "Aluminum riser, adjustable height, foldable for travel", "price": 34.99, "inStock": true },
+    { "id": "p-009", "name": "Desk Mat", "category": "accessories", "description": "Extended mousepad, 900x400mm, stitched edges, non-slip base", "price": 24.99, "inStock": true },
+    { "id": "p-010", "name": "Thunderbolt Dock", "category": "accessories", "description": "Dual 4K display support, 96W charging, 2x TB4 downstream", "price": 279.00, "inStock": false }
+  ]
+}
