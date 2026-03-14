@@ -1,5 +1,6 @@
 import Footer from './components/Footer'
 import { McpPage } from './pages/McpPage'
+import './theme'
 
 export default function App() {
   return (
