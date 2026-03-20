@@ -74,15 +74,7 @@ demo-mcp/
 name: "MCP Demo"
 app_id: "demo-mcp"
 version: "1.0.0"
-description: "Interactive Model Context Protocol (MCP) client"
-enabled: true
-rest: true
-mcp: true
-
-audit:
-  protocol:
-    mcp: true
-
+description: "Interactive Model Context Protocol (MCP) client — search tables via JSON-RPC 2.0"
 schemas:
   - schemas/mcp.graphql
 
